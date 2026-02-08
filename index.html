@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÉLEVÉ - Luxury Fashion & Timeless Elegance</title>
+    <meta name="description" content="Discover ÉLEVÉ's premium collection of sustainable luxury fashion. Timeless pieces crafted with exceptional quality.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="showPage('home')">ÉLEVÉ</div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="javascript:void(0)" onclick="showPage('home')">HOME</a>
+                <a href="javascript:void(0)" onclick="showPage('shop')">COLLECTION</a>
+                <a href="javascript:void(0)" onclick="showPage('about')">PHILOSOPHY</a>
+                <button class="icon-btn" onclick="showPage('search')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+                </button>
+                <button class="icon-btn" onclick="showPage('login')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </button>
+                <button class="icon-btn cart-btn" onclick="showPage('cart')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Home Page -->
+        <div id="homePage" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-badge">AUTUMN COLLECTION 2025</span>
+                    <h1 class="hero-title">
+                        Timeless<br>
+                        <span class="italic">Elegance</span>
+                    </h1>
+                    <p class="hero-text">
+                        Discover meticulously crafted pieces that transcend seasons.<br>
+                        Where heritage meets modern sophistication.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showPage('shop')">EXPLORE COLLECTION</button>
+                        <button class="btn btn-secondary" onclick="showPage('about')">OUR PHILOSOPHY</button>
+                    </div>
+                </div>
+                <div class="hero-image"></div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="container">
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                            </div>
+                            <h3>Sustainable Luxury</h3>
+                            <p>Ethically sourced premium materials</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                            </div>
+                            <h3>Complimentary Delivery</h3>
+                            <p>On all orders above $150</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </div>
+                            <h3>Lifetime Quality</h3>
+                            <p>Exceptional craftsmanship guaranteed</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Products -->
+            <section class="featured">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Featured Collection</h2>
+                        <p>Handpicked essentials for the discerning wardrobe</p>
+                    </div>
+                    <div class="products-grid" id="featuredProducts"></div>
+                    <div class="text-center">
+                        <button class="btn btn-primary" onclick="showPage('shop')">VIEW FULL COLLECTION</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="testimonials">
+                <div class="container">
+                    <h2 class="section-title">What Our Clients Say</h2>
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="testimonial-text">"Exquisite quality and unparalleled attention to detail. Each piece feels like a work of art."</p>
+                            <div class="testimonial-author">
+                                <strong>Alexander M.</strong>
+                                <span>Fashion Director</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="testimonial-text">"Finally, a brand that understands both sustainability and luxury. Absolutely phenomenal."</p>
+                            <div class="testimonial-author">
+                                <strong>Sophia Chen</strong>
+                                <span>Creative Consultant</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="testimonial-text">"The craftsmanship is outstanding. These pieces will remain timeless in my wardrobe."</p>
+                            <div class="testimonial-author">
+                                <strong>James Richardson</strong>
+                                <span>Architect</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter -->
+            <section class="newsletter">
+                <div class="container-small">
+                    <h2>Join Our Community</h2>
+                    <p>Subscribe for exclusive access to new collections and private sales</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-light">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <!-- Shop Page -->
+        <div id="shopPage" class="page">
+            <section class="shop-header">
+                <div class="container">
+                    <h1>The Collection</h1>
+                    <p>Discover pieces that define timeless sophistication</p>
+                </div>
+            </section>
+            <section class="shop-content">
+                <div class="container">
+                    <div class="products-grid" id="allProducts"></div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Product Page -->
+        <div id="productPage" class="page">
+            <section class="product-detail">
+                <div class="container">
+                    <button class="back-btn" onclick="showPage('shop')">← Return to Collection</button>
+                    <div id="productContent"></div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div id="aboutPage" class="page">
+            <section class="about-hero">
+                <h1>Our Philosophy</h1>
+                <p>Crafting tomorrow's heritage, today</p>
+            </section>
+            <section class="about-content">
+                <div class="container-small">
+                    <div class="about-section">
+                        <h2>Sustainable Luxury</h2>
+                        <p>We believe that true luxury lies not in excess, but in the perfect balance of quality, craftsmanship, and conscience. Each piece in our collection represents a commitment to both timeless style and environmental stewardship.</p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Organic Materials</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">75K+</div>
+                            <div class="stat-label">Satisfied Patrons</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">Zero</div>
+                            <div class="stat-label">Carbon Footprint</div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h2>Timeless Craftsmanship</h2>
+                        <p>Our garments are designed to transcend fleeting trends. Through meticulous attention to detail and unwavering commitment to quality, we create pieces that become cherished components of your wardrobe for years to come.</p>
+                    </div>
+
+                    <blockquote class="quote">
+                        <p>"Fashion fades, only style remains the same."</p>
+                        <cite>— Coco Chanel</cite>
+                    </blockquote>
+                </div>
+            </section>
+        </div>
+
+        <!-- Cart Page -->
+        <div id="cartPage" class="page">
+            <section class="cart-header">
+                <div class="container">
+                    <h1>Shopping Cart</h1>
+                    <p>Review your selected items</p>
+                </div>
+            </section>
+            <section class="cart-content">
+                <div class="container">
+                    <div id="cartItems"></div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Login Page -->
+        <div id="loginPage" class="page">
+            <section class="login-section">
+                <div class="login-container">
+                    <div class="login-box">
+                        <h1>Welcome Back</h1>
+                        <p>Sign in to your account</p>
+                        
+                        <form class="login-form" onsubmit="handleLogin(event)">
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" placeholder="your.email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" placeholder="Enter your password" required>
+                            </div>
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span>Remember me</span>
+                                </label>
+                                <a href="javascript:void(0)" class="forgot-link">Forgot password?</a>
+                            </div>
+                            <button type="submit" class="btn btn-primary">SIGN IN</button>
+                        </form>
+                        
+                        <div class="login-divider">
+                            <span>OR</span>
+                        </div>
+                        
+                        <button class="btn btn-secondary">CREATE NEW ACCOUNT</button>
+                        
+                        <div class="login-footer">
+                            <p>By signing in, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Search Page -->
+        <div id="searchPage" class="page">
+            <section class="search-section">
+                <div class="container">
+                    <div class="search-box">
+                        <h1>Search Our Collection</h1>
+                        <div class="search-input-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+                            <input type="text" id="searchInput" placeholder="Search for products..." oninput="handleSearch(this.value)">
+                        </div>
+                    </div>
+                    
+                    <div class="search-results">
+                        <div id="searchResults"></div>
+                    </div>
+                    
+                    <div class="search-suggestions">
+                        <h3>Popular Searches</h3>
+                        <div class="suggestion-tags">
+                            <span onclick="handleSearchTag('shirt')">Shirts</span>
+                            <span onclick="handleSearchTag('denim')">Denim</span>
+                            <span onclick="handleSearchTag('sweater')">Sweaters</span>
+                            <span onclick="handleSearchTag('coat')">Outerwear</span>
+                            <span onclick="handleSearchTag('cotton')">Cotton</span>
+                            <span onclick="handleSearchTag('linen')">Linen</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-logo">ÉLEVÉ</h3>
+                    <p>Crafting timeless elegance through sustainable luxury.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>EXPLORE</h4>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Best Sellers</a>
+                    <a href="#">Gift Guide</a>
+                    <a href="#">Private Sales</a>
+                </div>
+                <div class="footer-col">
+                    <h4>COMPANY</h4>
+                    <a href="#">Our Story</a>
+                    <a href="#">Sustainability</a>
+                    <a href="#">Craftsmanship</a>
+                    <a href="#">Careers</a>
+                </div>
+                <div class="footer-col">
+                    <h4>ASSISTANCE</h4>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Shipping Policy</a>
+                    <a href="#">Returns & Exchanges</a>
+                    <a href="#">Size Guide</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 ÉLEVÉ. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
